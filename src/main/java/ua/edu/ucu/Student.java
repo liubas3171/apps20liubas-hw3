@@ -2,7 +2,6 @@ package ua.edu.ucu;
 
 
 class Student {
-
     private double GPA;
     private int year;
     private String name;
@@ -33,7 +32,11 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student{name=" + name + ", surname=" + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
+        return "Student{name=" + name +
+                ", surname=" + surname +
+                ", " + "GPA=" +
+                GPA + ", year=" +
+                year + '}';
     }
 
     @Override
@@ -41,11 +44,10 @@ class Student {
         if (!(other instanceof Student)) {
             return false;
         }
-        return this.getGPA() == ((Student) other).getGPA() &&
-                this.getYear() == ((Student) other).getYear() &&
-                this.getName().equals(((Student) other).getName()) &&
-                this.getSurname().equals(((Student) other).getSurname());
-
+        return this.getGPA() == ((Student) other).getGPA()
+                && this.getYear() == ((Student) other).getYear()
+                && this.getName().equals(((Student) other).getName())
+                && this.getSurname().equals(((Student) other).getSurname());
     }
 
 }

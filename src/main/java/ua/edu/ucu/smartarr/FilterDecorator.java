@@ -1,6 +1,5 @@
 package ua.edu.ucu.smartarr;
 
-import com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators;
 import ua.edu.ucu.functions.MyPredicate;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class FilterDecorator extends SmartArrayDecorator {
 
     @Override
     public String operationDescription() {
-        return "Tests every element and removes it if it doesn't satisfy MyPredicate";
+        return "Filters elements by MyPredicate";
     }
 
 }

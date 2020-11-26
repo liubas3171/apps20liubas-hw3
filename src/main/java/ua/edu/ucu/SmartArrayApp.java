@@ -21,8 +21,8 @@ public class SmartArrayApp {
 
         MyComparator cmp = new MyComparator() {
             @Override
-            public int compare(Object o1, Object o2) {
-                return ((Integer) o1) - ((Integer) o2);
+            public int compare(Object firstObj, Object secondObj) {
+                return ((Integer) firstObj) - ((Integer) secondObj);
             }
         };
 
@@ -56,24 +56,24 @@ public class SmartArrayApp {
         MyPredicate predicate = new MyPredicate() {
             @Override
             public boolean test(Object t) {
-                return ((Student) t).getYear() == 2 &&
-                        ((Student) t).getGPA() >= 4;
+                return ((Student) t).getYear() == 2
+                        && ((Student) t).getGPA() >= 4;
             }
         };
 
         MyComparator comparator = new MyComparator() {
             @Override
-            public int compare(Object o1, Object o2) {
-                return ((Student) o1).getSurname().
-                        compareTo(((Student) o2).getSurname());
+            public int compare(Object firstObj, Object secondObj) {
+                return ((Student) firstObj).getSurname().
+                        compareTo(((Student) secondObj).getSurname());
             }
         };
 
         MyFunction function = new MyFunction() {
             @Override
             public Object apply(Object t) {
-                return ((Student) t).getSurname() + " " +
-                        ((Student) t).getName();
+                return ((Student) t).getSurname() + " "
+                        + ((Student) t).getName();
             }
         };
 
